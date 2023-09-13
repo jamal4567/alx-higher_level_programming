@@ -4,5 +4,5 @@ def search_replace(my_list, search, replace):
         if element != search:
             return element
         else:
-            return search
+            return replace
     return list(map(ele_to_replace, my_list))
