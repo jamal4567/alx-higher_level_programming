@@ -20,6 +20,7 @@ class Square:
     def size(self):
         ''' retrive the size '''
         return (self.__size)
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
