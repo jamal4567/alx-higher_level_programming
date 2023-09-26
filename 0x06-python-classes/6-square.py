@@ -31,12 +31,14 @@ class Square:
     @property
     def position(self):
         '''retrive the size '''
+
         return (self.__position)
 
     @position.setter
     def position(self, value):
         ''' set position of squar
-        Args: value (int): tupl
+        Args:
+            value (int): tupl
         '''
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
