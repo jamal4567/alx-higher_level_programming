@@ -8,8 +8,8 @@ def add_integer(a, b=98):
     ''' Return an integer the addition of a and b
 
     Args:
-        a : an integer
-        b : an integer
+        a : argument1
+        b : argument2
 
     Raises:
         TypeError: if a or b not integer or float
