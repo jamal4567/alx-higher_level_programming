@@ -1,0 +1,71 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing function ``add_integer`` from module ``0-add_integer``:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+    addition of positive integers:
+    >>> add_integer(1, 2)
+    3
+
+    addition of negative integer:
+    >>> add_integer(-1, -2)
+    -3
+
+    addition of one positive and one negative:
+    >>> add_integer(100, -2)
+    98
+
+    addition with default b = 98:
+    >>> add_integer(2)
+    100
+
+    addition of negative float:
+    >>> add_integer(-3.9, -2.5)
+    -5
+
+    addition of positive float:
+    >>> add_integer(5.08, 8.8)
+    13
+
+    addition of positive float and negative integer:
+    >>> add_integer(100.3, -2)
+    98
+
+    addition of character:
+    >>> add_integer('c', 'H')
+    TypeError: a must be an integer
+
+    addition of char and integer:
+    >>> add_integer('2', 'H')
+    TypeError: b must be an integer
+
+    >>> add_integer('c', 3)
+    TypeError: a must be an integer
+
+    addition of tow strings:
+    >>> add_integer('fun', 'school')
+    TypeError: a must be an integer
+
+    addition of string and integer:
+    >>> add_integer(2, 'school')
+    TypeError: b must be an integer
+
+    use infinity in function:
+    >>> add_integer(float('inf'))
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(4, float('inf'))
+    OverflowError: cannot convert float infinity to integer
+
+    use NaN:
+    >>> add_integer(float('NaN'))
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(9, float('NaN'))
+    ValueError: cannot convert float NaN to integer
