@@ -69,3 +69,11 @@ Importing function ``add_integer`` from module ``0-add_integer``:
 
     >>> add_integer(9, float('NaN'))
     ValueError: cannot convert float NaN to integer
+
+    addition of integer with tuple:
+    >>> add_integer(2, (1,1))
+    TypeError: b must be an integer
+
+    addition with list:
+    >>> add_integer(2, [1,3])
+    TypeError: b must be an integer
