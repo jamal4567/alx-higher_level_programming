@@ -42,11 +42,8 @@ Importing function ``add_integer`` from module ``0-add_integer``:
     TypeError: a must be an integer
 
     addition of char and integer:
-    >>> add_integer('2', 'H')
+    >>> add_integer(2, 'H')
     TypeError: b must be an integer
-
-    >>> add_integer('c', 3)
-    TypeError: a must be an integer
 
     addition of tow strings:
     >>> add_integer('fun', 'school')
@@ -55,6 +52,10 @@ Importing function ``add_integer`` from module ``0-add_integer``:
     addition of string and integer:
     >>> add_integer(2, 'school')
     TypeError: b must be an integer
+
+    addition of None:
+    >>> add_integer(None)
+    TypeError: a must be an integer
 
     use infinity in function:
     >>> add_integer(float('inf'))
