@@ -58,11 +58,10 @@ class Rectangle:
         ''' print the rectangle with the character # '''
         if self.__width == 0 or self.__height == 0:
             return ""
-
         m_print = ''
         for i in range(self.__height):
             for j in range(self.__width):
                 m_print += '#'
             if i < self.__height - 1:
                 m_print += '\n'
-        return m_print
+        return (m_print)
