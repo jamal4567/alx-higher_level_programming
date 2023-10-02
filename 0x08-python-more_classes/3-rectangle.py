@@ -59,12 +59,12 @@ class Rectangle:
         using str and print
         '''
         if self.__width == 0 or self.__height == 0:
-            return ("")
+            return ""
 
-        print = ""
+        m_print = ''
         for i in range(self.__height):
             for j in range(self.__width):
-                print += "#"
+                m_print += '#'
             if i < self.__height - 1:
-                print += "\n"
-        return print
+                m_print += '\n'
+        return m_print
