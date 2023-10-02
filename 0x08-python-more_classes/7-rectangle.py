@@ -72,9 +72,9 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 try:
-                   print += str(self.print_symbol)
+                    print += str(self.print_symbol)
                 except Exception:
-                   print += type(self).print_symbol
+                    print += type(self).print_symbol
             if i < self.__height - 1:
                 print += '\n'
         return print
