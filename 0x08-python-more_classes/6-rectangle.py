@@ -3,10 +3,7 @@
 
 
 class Rectangle:
-    ''' class define by
-    attribute:
-             number_of_instances: count each new instance instantiation or deletion
-    '''
+    ''' class define by:'''
     number_of_instances = 0
     def __init__(self, width=0, height=0):
         ''' Instantiation
