@@ -3,11 +3,7 @@
 
 
 class Rectangle:
-    ''' class define by
-    attribute:
-             number_of_instances: count each new instance instantiation or deletion
-             print_symbol: Used as symbol for string representation
-    '''
+    ''' class define by:'''
     number_of_instances = 0
     print_symbol = '#'
 
