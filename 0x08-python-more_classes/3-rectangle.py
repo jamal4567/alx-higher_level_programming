@@ -52,7 +52,7 @@ class Rectangle:
         ''' return perimetr of rectangle '''
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self.__width + self.__height)
+        return 2 * (self.__height + self.__width)
     
     def __str__(self):
         ''' print the rectangle with the character #
