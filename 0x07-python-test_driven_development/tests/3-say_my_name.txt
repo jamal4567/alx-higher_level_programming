@@ -15,12 +15,7 @@ Importing function ``say_my_name`` from module ``3-say_my_name``:
 
     passing string to one argument:
     >>> say_my_name("Bob")
-    My name is Bob
-
-    passing no argument:
-    >>> say_my_name()
-    Traceback (most recent call last):
-    ypeError: say_my_name() missing 1 required positional argument: 'first_name'
+    My name is Bob 
 
     passing none string:
     >>> say_my_name(12, "White")
@@ -31,9 +26,13 @@ Importing function ``say_my_name`` from module ``3-say_my_name``:
     >>> say_my_name(["hello", "school"], "bye")
     Traceback (most recent call last):
     TypeError: first_name must be a string
-    
+
     passing None:
     >>> say_my_name(None)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
+    passing no argument:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
