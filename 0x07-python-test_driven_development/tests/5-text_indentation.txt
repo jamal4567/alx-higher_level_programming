@@ -1,0 +1,185 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Importing function `text_indentation``` from module ``5-text_indentation``:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+    >>> text_indentation("")
+
+
+    print string:
+    >>> text_indentation("hello")
+    hello
+
+    space at beginning
+    >>> text_indentation("    hello")
+    hello
+
+    space at the end
+    >>> text_indentation("hello   ")
+    hello   
+
+    All possibl way with character '.'
+    >>> text_indentation(".hello world")
+    .
+    <BLANKLINE>
+    hello world
+
+    >>> text_indentation("....hello world")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    hello world
+
+    >>> text_indentation("hello world.")
+    hello world.
+    <BLANKLINE>
+
+    >>> text_indentation("hello world...")
+    hello world.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+    >>> text_indentation("hello world.i am ready.")
+    hello world.
+    <BLANKLINE>
+    i am ready.
+    <BLANKLINE>
+
+    >>> text_indentation("...")
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+    all possible way with the character '?'
+    >>> text_indentation("? hello world")
+    ?
+    <BLANKLINE>
+    hello world
+
+    >>> text_indentation("????hello world")
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    hello world
+
+    >>> text_indentation("hello world?")
+    hello world?
+    <BLANKLINE>
+
+    >>> text_indentation("hello world???")
+    hello world?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+    >>> text_indentation("hello world?i am ready?")
+    hello world?
+    <BLANKLINE>
+    i am ready?
+    <BLANKLINE>
+
+    >>> text_indentation("???")
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+    All possible way with character ':'
+    >>> text_indentation(": hello world")
+    :
+    <BLANKLINE>
+    hello world
+
+    >>> text_indentation("::::hello world")
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    hello world
+
+    >>> text_indentation("hello world:")
+    hello world:
+    <BLANKLINE>
+
+    >>> text_indentation("hello world:::")
+    hello world:
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+    >>> text_indentation("hello world:i am ready:")
+    hello world:
+    <BLANKLINE>
+    i am ready:
+    <BLANKLINE>
+
+    >>> text_indentation(":::")
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+    Using character '.', ':', '?':
+    >>> text_indentation(".:?")
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+
+    in text :
+    >>> text_indentation("hello.wold:code?")
+    hello.
+    <BLANKLINE>
+    wold:
+    <BLANKLINE>
+    code?
+    <BLANKLINE>
+
+    invalide syntaxe:
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
