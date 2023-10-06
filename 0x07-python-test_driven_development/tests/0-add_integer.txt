@@ -65,8 +65,18 @@ Importing function ``add_integer`` from module ``0-add_integer``:
     	      ...
     OverflowError: cannot convert float infinity to integer
 
+    >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
+    	      ...
+    OverflowError: cannot convert float infinity to integer
+
     Nan:
     >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(0, float('nan'))
     Traceback (most recent call last):
     	      ...
     ValueError: cannot convert float NaN to integer
