@@ -73,6 +73,14 @@ Importing function ``matrix_divided`` from module ``2-matrix_divided``:
     Traceback (most recent call last):
     TypeError: div must be a number
 
+    list of lists of integer div = float('inf'):
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, float('inf')))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
     missing one argument:
     >>> matrix = [
     ...     [1, 2, 3],
@@ -81,11 +89,3 @@ Importing function ``matrix_divided`` from module ``2-matrix_divided``:
     >>> print(matrix_divided(matrix))
     Traceback (most recent call last):
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
-
-    list of lists of integer div = float('inf'):
-    >>> matrix = [
-    ...     [1, 2, 3],
-    ...     [4, 5, 6]
-    ... ]
-    >>> print(matrix_divided(matrix, float('inf')))
-    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
