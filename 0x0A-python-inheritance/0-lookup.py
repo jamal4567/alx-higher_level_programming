@@ -1,9 +1,9 @@
-#/usr/bin/python3
-'''  function that returns the list '''
+#!/usr/bin/python3
+''' module with function lookup() '''
 
 
 def lookup(obj):
-    ''' function: lookup()
-    Return list of attributes and methods of an object
+    ''' Return the list of available,
+    attributes and methods of an object
     '''
     return dir(obj)
