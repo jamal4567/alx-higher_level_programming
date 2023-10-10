@@ -9,7 +9,6 @@ if __name__ == "__main__":
     try:
         item = load_from_json_file('add_item.json')
     except:
-        item =[]
-    
+        item = []    
     item.extend(sys.argv[1:])
     save_to_json_file(item, 'add_item.json')
