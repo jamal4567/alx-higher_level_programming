@@ -17,22 +17,22 @@ class Rectangle(Base):
     def width(self):
         ''' get value of width '''
         return self.__width
-    
+
     @property
     def height(self):
         ''' get value of height '''
         return self.__height
-    
+
     @property
     def x(self):
         ''' get value of x '''
         return self.__x
-    
+
     @property
     def y(self):
         ''' get value of y '''
         return self.__y
-    
+
     @width.setter
     def width(self, value):
         '''set value of width '''
@@ -40,7 +40,7 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        
+
         self.__width = value
 
     @height.setter
@@ -50,9 +50,9 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-        
+
         self.__height = value
-    
+
     @x.setter
     def x(self, value):
         ''' set value of x '''
@@ -60,7 +60,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        
+
         self.__x = value
 
     @y.setter
@@ -70,9 +70,9 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        
+
         self.__y = value
-    
+
     def area(self):
         ''' returns the area value of the Rectangle '''
         return self.__width * self.__height
@@ -91,7 +91,7 @@ class Rectangle(Base):
     def __str__(self):
         ''' return format '''
         desc = '[Rectangle]' + ' (' + str(self.id) + ') '
-        desc += str(self.__x)  + '/' + str(self.__y)
+        desc += str(self.__x) + '/' + str(self.__y)
         desc += ' - ' + str(self.__width) + '/' + str(self.__height)
         return desc
 
@@ -123,10 +123,10 @@ class Rectangle(Base):
                     self.x = value
                 elif key == 'y':
                     self.y = value
-    
+
     def to_dictionary(self):
         ''' returns the dictionary representation of a Rectangle '''
-        dictionary = {'id':self.id, 'width':self.__width,
-                      'height':self.__height, 'x':self.__x,
-                      'y':self.__y}
+        dictionary = {'id': self.id, 'width': self.__width,
+                      'height': self.__height, 'x': self.__x,
+                      'y': self.__y}
         return dictionary
