@@ -55,7 +55,7 @@ class Base:
     def load_from_file(cls):
         ''' Returns a list of instances '''
         filename = cls.__name__+'.json'
-         try:
+        try:
             with open(filename) as f:
                 l_dictionaries = cls.from_json_string(f.read())
         except:
