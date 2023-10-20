@@ -57,10 +57,12 @@ class Base:
         ''' Returns a list of instances '''
         filename = cls.__name__+'.json'
         l_dictionaries = []
+        l_isinstance = []
+
         if os.path,exist(filename):
             with open(filename) as f:
                 l_dictionaries = cls.from_json_string(f.read())
-                l_isinstance = []
+
                 for dictionary in l_dictionaries:
                     l_isinstance.append(cls.create(**dictionary))
 
