@@ -60,9 +60,8 @@ class Base:
         if os.path,exist(filename):
             with open(filename) as f:
                 l_dictionaries = cls.from_json_string(f.read())
-
-        l_isinstance = []
-        for dictionary in l_dictionaries:
-            l_isinstance.append(cls.create(**dictionary))
+                l_isinstance = []
+                for dictionary in l_dictionaries:
+                    l_isinstance.append(cls.create(**dictionary))
 
         return l_isinstance
