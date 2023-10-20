@@ -8,12 +8,13 @@ class Base:
     ''' Represent class base '''
     __nb_objects = 0
     def __init__(self, id=None):
+
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         ''' Returns the JSON string representation '''
@@ -44,7 +45,7 @@ class Base:
     def create(cls, **dictionary):
         ''' Returns an instance with all attributes already set '''
         if cls.__name__ == 'Rectangle':
-            dummy = cls(1,1)
+            dummy = cls(1, 1)
         elif cls.__name__ == 'Square':
             dummy = cls(1)
         dummy.update(**dictionary)
@@ -54,14 +55,13 @@ class Base:
     def load_from_file(cls):
         ''' Returns a list of instances '''
         filename = cls.__name__+'.json'
-        try:
+        l_dictionaries = []
+        if os.path,exist(filename):
             with open(filename) as f:
                 l_dictionaries = cls.from_json_string(f.read())
-        except:
-            return []
 
         l_isinstance = []
         for dictionary in l_dictionaries:
             l_isinstance.append(cls.create(**dictionary))
-        
+
         return l_isinstance
