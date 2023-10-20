@@ -2,7 +2,6 @@
 ''' defines class rectangle '''
 
 import json
-import os
 
 
 class Base:
@@ -56,14 +55,14 @@ class Base:
     def load_from_file(cls):
         ''' Returns a list of instances '''
         filename = cls.__name__+'.json'
-        l_dictionaries = []
-        l_isinstance = []
-
-        if os.path,exist(filename):
+         try:
             with open(filename) as f:
                 l_dictionaries = cls.from_json_string(f.read())
+        except:
+            return []
 
-                for dictionary in l_dictionaries:
-                    l_isinstance.append(cls.create(**dictionary))
+        l_isinstance = []
+        for dictionary in l_dictionaries:
+            l_isinstance.append(cls.create(**dictionary))
 
         return l_isinstance
