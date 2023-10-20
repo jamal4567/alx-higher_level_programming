@@ -2,6 +2,7 @@
 ''' defines class rectangle '''
 
 import json
+import os
 
 
 class Base:
