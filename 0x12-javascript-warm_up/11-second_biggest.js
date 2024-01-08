@@ -1,20 +1,13 @@
 #!/usr/bin/node
 
-function Bigsecond (myArray) {
-  if (myArray.length === 2 || myArray.length === 3) { return (0); }
+const { argv } = require('process');
+const args = argv.slice(2);
+let bgsecend = 0;
+let arr = [];
 
-  let max = myArray[2];
-  let secondMax = myArray[3];
-
-  for (let i = 2; i < myArray.length; i++) {
-    if (myArray[i] > max) {
-      secondMax = max;
-      max = myArray[i];
-    } else if (myArray[i] > secondMax && myArray[i] < max) {
-      secondMax = myArray[i];
-    }
-  }
-  return (secondMax);
+if (args.length > 1) {
+  arr = [...new Set(args.map((e) => parseInt(e)).sort((a, b) => b - a))];
+  bgsecend = arr.length > 1 ? arr[1] : arr[0];
 }
 
-console.log(Bigsecond(process.argv));
+console.log(bgsecend);
