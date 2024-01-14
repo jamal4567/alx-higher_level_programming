@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+''';mhlkmklmjlkum '''
 
 import MySQLdb
 from sys import argv
