@@ -13,12 +13,11 @@ from sys import argv
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
             .format(argv[1], argv[2], argv[3]))
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).order_by(State.id).first()
-    if states is not None:
-        print('{0}: {1}'.format(State.id, State.name))
+    state = session.query(State).order_by(State.id).first()
+    if state is not None:
+        print('{}: {}'.format(state.id, state.name))
     else:
         print('Nothing')
     
